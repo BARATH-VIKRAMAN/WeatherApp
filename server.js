@@ -3,7 +3,7 @@
 //}
 
 
-const OpenWeatherAPI = process.env.OpenWeatherAPI;
+//const OpenWeatherAPI = process.env.OpenWeatherAPI;
 
 const express = require("express")
 const app = express();
@@ -38,6 +38,6 @@ const url = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+l
 //   })
 // })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT||3000, function() {
   console.log("Server started and running at port 3000");
 })
